@@ -44,7 +44,7 @@ body p {
   height: 100px;
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 10px;
-  padding: 25px;
+  padding: 25px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +59,7 @@ body p {
   height: 400px;
   background-color: hsl(33deg, 100%, 98%);
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,7 +90,7 @@ hr {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0.8rem;
+  gap: 0.7rem;
   margin-bottom: 1.5rem;
 }
 .chart__body .day {
@@ -102,8 +102,34 @@ hr {
   align-self: center;
   gap: 0.8rem;
 }
+.chart__body .day .bar::before {
+  content: attr(data-val);
+  background-color: hsl(25deg, 47%, 15%);
+  border-radius: 4px;
+  display: block;
+  padding: 0.25rem;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -125%);
+  z-index: 2;
+  color: hsl(33deg, 100%, 98%);
+}
+.chart__body .day:hover .bar::before {
+  opacity: 1;
+}
+.chart__body .day:hover .current {
+  background-color: hsl(186deg, 34%, 70%) !important;
+}
+.chart__body .day:hover .bar {
+  background-color: hsl(10deg, 79%, 75%);
+}
 .chart__body .day .bar {
-  height: 100%;
+  position: relative;
+  height: 70%;
   width: 100%;
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 5px;
@@ -144,6 +170,10 @@ hr {
 .percentage-container .percentage {
   color: hsl(25deg, 47%, 15%);
   font-weight: 700;
+}
+
+.current {
+  background-color: hsl(186deg, 34%, 60%) !important;
 }
 
 /*# sourceMappingURL=/style.500aa19d.css.map */

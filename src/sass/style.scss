@@ -5,7 +5,9 @@
 //Primary
 
 $soft-red: hsl(10, 79%, 65%);
+$soft-red-light: hsl(10, 79%, 75%);
 $cyan: hsl(186, 34%, 60%);
+$cyan-light: hsl(186, 34%, 70%);
 
 // Neutral
 
@@ -63,7 +65,7 @@ body{
     height: 100px;
     background-color: $soft-red;
     border-radius: 10px;
-    padding: 25px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +81,7 @@ body{
     height: 400px;
     background-color: $very-pale-orange;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,8 +113,8 @@ hr{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;  
 
     .day{
         height: 100%;
@@ -123,8 +125,38 @@ hr{
         align-self: center;
         gap: .8rem;
 
+        .bar::before{
+            content: attr(data-val);
+            background-color: $dark-brown;
+            border-radius: 4px;
+            display: block;
+            padding: 0.25rem;
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.25s linear;
+            position: absolute;
+            top:0;
+            left: 50%;
+            transform: translate(-50%, -125%);
+            z-index: 2;
+            color: $very-pale-orange;
+        }
+
+        &:hover .bar::before{
+            opacity: 1;
+        }
+
+        &:hover .current{
+            background-color: $cyan-light !important;
+        }
+
+        &:hover .bar{
+            background-color: $soft-red-light;
+        }
+
         .bar{
-            height: 100%;
+            position: relative;
+            height: 70%;
             width: 100%;
             background-color: $soft-red;
             border-radius: 5px;
@@ -136,6 +168,7 @@ hr{
             text-align: center;
         }
     }
+
 }
 
 .expenses{
@@ -173,3 +206,8 @@ hr{
         font-weight: 700;
     }
 }
+
+.current{
+    background-color: $cyan !important;
+}
+
