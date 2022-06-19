@@ -66,11 +66,11 @@ body{
 }
 
 .header{
-    min-width: 350px;
+    min-width: 360px;
     height: 100px;
     background-color: $soft-red;
     border-radius: 10px;
-    padding: 25px 20px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,19 +78,28 @@ body{
     *{
         color: $very-pale-orange;
     }
+
+    @media screen and (min-width: 768px){
+        width: 400px;
+    }
+        
 }
 
+
 .body-container{
-    width: 350px;
-    width: 350px;
+    width: 360px;
     height: 400px;
     background-color: $very-pale-orange;
     border-radius: 10px;
-    padding: 25px 20px;
+    padding: 25px ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 768px){
+        width: 400px;
+    }
 }
 
 .chart{

@@ -44,11 +44,11 @@ body p {
 }
 
 .header {
-  min-width: 350px;
+  min-width: 360px;
   height: 100px;
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 10px;
-  padding: 25px 20px;
+  padding: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,18 +56,27 @@ body p {
 .header * {
   color: hsl(33deg, 100%, 98%);
 }
+@media screen and (min-width: 768px) {
+  .header {
+    width: 400px;
+  }
+}
 
 .body-container {
-  width: 350px;
-  width: 350px;
+  width: 360px;
   height: 400px;
   background-color: hsl(33deg, 100%, 98%);
   border-radius: 10px;
-  padding: 25px 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .body-container {
+    width: 400px;
+  }
 }
 
 .chart {
