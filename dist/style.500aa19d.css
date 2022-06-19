@@ -3,8 +3,45 @@
   font-family: "DM Sans", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: hsl(27deg, 66%, 92%);
+}
+body h1 {
+  font-size: 1.8rem;
+}
+body h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  min-width: 350px;
+  height: 100px;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header * {
+  color: hsl(33deg, 100%, 98%);
 }
 
 /*# sourceMappingURL=/style.500aa19d.css.map */

@@ -18,6 +18,47 @@ $very-pale-orange: hsl(33, 100%, 98%);
     font-family: "DM Sans", sans-serif;
 }
 
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 body{
     background-color: $cream;
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h3{
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    min-width: 350px;
+    height: 100px;
+    background-color: $soft-red;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    *{
+        color: $very-pale-orange;
+    }
+}
+
