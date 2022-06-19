@@ -27,6 +27,11 @@ $very-pale-orange: hsl(33, 100%, 98%);
     box-sizing: border-box;
 }
 
+h3{
+    border: none;
+}
+
+
 body{
     background-color: $cream;
 
@@ -156,10 +161,11 @@ hr{
 
         .bar{
             position: relative;
-            height: 70%;
             width: 100%;
             background-color: $soft-red;
             border-radius: 5px;
+            height: 0;
+            transition: background-color 0.25s linear, height 0.85s ease-out;
         }
 
         p{

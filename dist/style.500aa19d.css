@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+h3 {
+  border: none;
+}
+
 body {
   background-color: hsl(27deg, 66%, 92%);
 }
@@ -129,10 +133,11 @@ hr {
 }
 .chart__body .day .bar {
   position: relative;
-  height: 70%;
   width: 100%;
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 5px;
+  height: 0;
+  transition: background-color 0.25s linear, height 0.85s ease-out;
 }
 .chart__body .day p {
   width: 100%;
